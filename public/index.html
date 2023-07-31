@@ -21,28 +21,27 @@
     <section class="header_section">
         <nav class="blog_navbar">
             <header class="blog_header">
-                <img src="./assets/images/page_icon.png" alt="" srcset="" style="height:8%;">
+                <img src="./assets/images/page_icon.png" alt="" srcset="" style="height:8%; padding-right:5%;">
                 <h1 class="blog_header_text">BLOOM</h1>
             </header>
 
             <div class="blog_topnav" id="blog_topnav">
-                <a href="#home" class="active">Home</a>
-                <a href="#stories">Stories</a>
+                <a href="#home" class="active navbar_item">Home</a>
+                <a class="navbar_item" href="#stories">Stories</a>
                     <div class="dropdown">
                         <button class="dropbtn">
                             <i class="fas fa-caret-down" aria-hidden="true"></i>
                         </button>
-                        <div class="dropdown_content">
+                        <div class="dropdown_content" id="dropdownContent"> <!-- Add id="dropdownContent" here -->
                             <h3 class="dropdown_text">Categories:</h3>
                             <a href="#">True Crime</a>
                             <a href="#">Gossip</a>
                             <a href="#">All</a>
                         </div>
                     </div>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-
+                <a class="navbar_item" href="#contact">Contact</a>
+                <a class="navbar_item" href="#about">About</a>
+                <a class="navbar_item" href="" class="icon" id="navbar_icon">&#9776;</a>
             </div>
 
         </nav>
