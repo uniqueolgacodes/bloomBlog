@@ -1,0 +1,36 @@
+/* Basic styling for navbar icons when navbar height is set to 30%*/
+.nav_icon{
+    height:30%; 
+    padding-right:5%;
+}
+
+.dancing_script{ /* Font face for cursive */
+    font-family: 'Borel', cursive;
+    font-family: 'Comforter', cursive;
+    font-family: 'Dancing Script', cursive;
+}
+
+.center { /*To align an item to the center*/
+    border: 5px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+  }
+
+  /* .blog_searchbar{
+    border: 3px solid black;
+  } */
+  .search{
+    border: none;
+    width: 70%;
+  }
+
+  /* .section_title{
+    
+  } */
+
+  .hidden{
+    display: none;
+  }

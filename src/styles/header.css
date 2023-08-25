@@ -115,42 +115,122 @@
 
 .header_section{
   width:100%;
+  height: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(https://e0.pxfuel.com/wallpapers/622/626/desktop-wallpaper-windows-11-windows-11-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .blog_navbar{
   display: inline-flex;
-  width:100%;
+  width: 90%;
+  height: 25%;
+  color: #f9f9f9;
 }
 .blog_header{
   display: flex;
   padding: 0;
   width: 30%;
-  padding-right: 30%;
+  margin-right:50%;
+  
+}
+
+.blog_header_text{
+  font-weight: bolder;
 }
 
 .blog_topnav{
   display: inline-flex;
   float:right;
+  width: auto;
+  color: #f9f9f9;
+  margin-top: 3px;
+}
+.active{
+  border-radius: 30px;
+  background-color: black;
+  height: 40px;
+}
+#dropbtn{
+  border: none;
+  background: none;
+  padding-top: 5px;
+  color: #f9f9f9;
 }
 
-.dropdown_content {
+#dropdownContent {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 2;
   }
-.dropdown_content a {
+
+
+#dropdownContent a {
   float: none;
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 .navbar_item{
-  padding: 10px;
+  padding: 15px;
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: 400;
+  transition: ease 1s;
+  
+}
+.navbar_item:hover{
+  border-radius: 30px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  height: 40px;
+  width:100px;
+}
+
+.blog_header_tagnsearch{
+  text-align: center;
+  /* padding-left: 30%; */
+  color: white;
+}
+
+.blogtitle{
+  font-size: 120px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-family:'rolling_beat_personal_useRg';
+}
+
+.blogsearch{
+  
+  width:40%;
+  text-align: center;
+  border: 1.5px solid white;
+  border-radius: 50px;
+  margin-left: 30%;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.searchbar{
+  background: none;
+  color: white;
+}
+.searchbar:active{
+  background-color: white;
+  color: black;
+}
+.tagline{
+  margin-bottom: 70px;
+}
+
+.nextpage_caret{
+  text-align: center;
+  margin-left: 50%;
+  font-size: 80px;
+  color: white;
 }

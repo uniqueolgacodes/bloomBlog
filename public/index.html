@@ -1,19 +1,31 @@
-<html lang="en">
+<!DOCTYPE html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Borel&family=Comforter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Comforter&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1eb2bdc693.js" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="../src/styles/header.css">
+    <link rel="stylesheet" href="../public/assets/css/csslibraryolgacodes.css">
+    <link rel="stylesheet" href="../public/assets/stylesheet.css">
+    <link rel="stylesheet" href="../public/assets/css/featuredposts.css">
     <script src="../src/components/header.js"></script>
     <title>Bloom</title>
 </head>
@@ -21,17 +33,24 @@
     <section class="header_section">
         <nav class="blog_navbar">
             <header class="blog_header">
-                <img src="./assets/images/page_icon.png" alt="" srcset="" style="height:8%; padding-right:5%;">
-                <h1 class="blog_header_text">BLOOM</h1>
+                <img src="./assets/images/page_icon.png" class="nav_icon" alt="" srcset="">
+                <h1 class="blog_header_text dancing_script">BLOOM</h1>
             </header>
 
             <div class="blog_topnav" id="blog_topnav">
                 <a href="#home" class="active navbar_item">Home</a>
-                <a class="navbar_item" href="#stories">Stories</a>
-                    <div class="dropdown">
-                        <button class="dropbtn">
-                            <i class="fas fa-caret-down" aria-hidden="true"></i>
+                <a class="navbar_item" id="navbar_story" href="#stories">Stories</a>
+                    <div class="dropdowndiv">
+                        <button onclick="viewDropdown()" class="drop_btn" id="dropbtn">
+                            
+                            <i class="fas fa-caret-down" id="" aria-hidden="true"></i>
                         </button>
+                        <script>
+                                const btn = document.querySelector(".drop_btn");
+                                function viewDropdown(){
+                                    btn.style.display = "block";
+                                }
+                            </script>
                         <div class="dropdown_content" id="dropdownContent"> <!-- Add id="dropdownContent" here -->
                             <h3 class="dropdown_text">Categories:</h3>
                             <a href="#">True Crime</a>
@@ -46,7 +65,613 @@
 
         </nav>
 
-        
+       <div class="blog_header_tagnsearch">
+            <h1 class="blogtitle">BLOOM</h1> 
+
+            <div class="blogsearch blog_searchbar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search blogsearch_icon" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+                    <input type="text" name="blogsearch_text" id="blogsearch_text" class="searchbar search" placeholder="Looking for something in particular?">
+            </div>
+
+            <h2 class="tagline">
+                A blog for the curious and creative
+            </h2>
+       </div>
+
+       <i class="fa-solid fa-caret-down fa-bounce nextpage_caret"></i>
     </section>
+    
+
+
+
+
+
+    <section class="featured_posts_section">
+        <h2 class="section_title">
+            FEATURED POST
+        </h2>
+        <p class="tagline">
+            Here are some of our best posts, handpicked just for you
+        </p>
+
+        <div class="featured_posts">
+            <!--POST 1-->
+            <div class="post_card blog_post post1">
+                <h2 class="post_title">
+                    How to put together a stylish outfit
+                </h2>
+                <img src="https://wallpapercrafter.com/th8002/714057-women-model-blonde-blue-eyes-jeans-Dani-Diamond.jpg" class="post_img" alt="Image not found" srcset="">
+                <p class="post_info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem... 
+                </p>
+                
+                <button class="blog_modalbox modalbtnf1" id="modalbtnf1">
+                    View More...
+                </button>
+            </div>
+
+            <div id="postmodal1" id="modal1" class="modal1">
+                <div class="post_card blog_post modal_item">
+                    <span class="close">&times;</span>
+                    <h2 class="post_title">
+    
+                    </h2>
+                    <img src="https://wallpapercrafter.com/th8002/714057-women-model-blonde-blue-eyes-jeans-Dani-Diamond.jpg"" class="post_img" alt="Image not found" srcset="">
+                    <p class="post_info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ut eum tempore libero expedita. Consequatur, animi recusandae rem aspernatur laudantium magnam alias deleniti illo earum distinctio qui nostrum eligendi blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non excepturi, numquam facilis quisquam aut a sed tempora amet autem nulla ex sint libero, nobis fuga necessitatibus vel nihil soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad velit, nesciunt recusandae facilis hic nulla debitis. Voluptatem magnam, nam optio ipsa eligendi illo asperiores est. Eius nemo obcaecati officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quo corrupti ullam modi amet asperiores. Corrupti, laudantium a nobis enim voluptatibus sit, asperiores, et consectetur ipsam facilis nulla excepturi dolores!
+                    </p>
+                    
+                    <div class="author_bio">
+    
+                    </div>
+                    <div class="social_sharing">
+    
+                    </div>
+                    <div class="blog_comment">
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--POST 2-->
+            <div class="post_card blog_post post2">
+                <h2 class="post_title">
+                    A guide to food allergies
+                </h2>
+                <img src="https://www.nyallergy.com/wp-content/uploads/xCopy-of-Food-Allergy-Facts.png.pagespeed.ic.KeTaAxpzge.webp" class="post_img" alt="Image not found" srcset="">
+                <p class="post_info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem... 
+                </p>
+                
+                <button class="blog_modalbox modalbtnf2">
+                    View More...
+                </button>
+            </div>
+
+            <div id="postmodal2" class="modal2 hidden">
+                <div class="post_card blog_post modal_item">
+                    <h2 class="post_title">
+    
+                    </h2>
+                    <img src="https://www.nyallergy.com/wp-content/uploads/xCopy-of-Food-Allergy-Facts.png.pagespeed.ic.KeTaAxpzge.webp" class="post_img" alt="Image not found" srcset="">
+                    <p class="post_info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ut eum tempore libero expedita. Consequatur, animi recusandae rem aspernatur laudantium magnam alias deleniti illo earum distinctio qui nostrum eligendi blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non excepturi, numquam facilis quisquam aut a sed tempora amet autem nulla ex sint libero, nobis fuga necessitatibus vel nihil soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad velit, nesciunt recusandae facilis hic nulla debitis. Voluptatem magnam, nam optio ipsa eligendi illo asperiores est. Eius nemo obcaecati officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quo corrupti ullam modi amet asperiores. Corrupti, laudantium a nobis enim voluptatibus sit, asperiores, et consectetur ipsam facilis nulla excepturi dolores!
+                    </p>
+                    
+                    <div class="author_bio">
+    
+                    </div>
+                    <div class="social_sharing">
+    
+                    </div>
+                    <div class="blog_comment">
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!--POST 3-->
+            <div class="post_card blog_post post3">
+                <h2 class="post_title">
+                    How to save money
+                </h2>
+                <img src="https://www.vacu.org/sites/default/files/styles/max_325x325/public/article-featured-image/2019-06/GettyImages-869577740.jpg?itok=J88hNHrF" class="post_img" alt="Image not found" srcset="">
+                <p class="post_info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem... 
+                </p>
+                
+                <button class="blog_modalbox modalbtnf3">
+                    View More...
+                </button>
+            </div>
+
+            <div id="postmodal3" class="modal3 hidden">
+                <div class="post_card blog_post modal_item">
+                    <h2 class="post_title">
+                        How to save money
+                    </h2>
+                    <img src="https://www.vacu.org/sites/default/files/styles/max_325x325/public/article-featured-image/2019-06/GettyImages-869577740.jpg?itok=J88hNHrF" class="post_img" alt="Image not found" srcset="">
+                    <p class="post_info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ut eum tempore libero expedita. Consequatur, animi recusandae rem aspernatur laudantium magnam alias deleniti illo earum distinctio qui nostrum eligendi blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non excepturi, numquam facilis quisquam aut a sed tempora amet autem nulla ex sint libero, nobis fuga necessitatibus vel nihil soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad velit, nesciunt recusandae facilis hic nulla debitis. Voluptatem magnam, nam optio ipsa eligendi illo asperiores est. Eius nemo obcaecati officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quo corrupti ullam modi amet asperiores. Corrupti, laudantium a nobis enim voluptatibus sit, asperiores, et consectetur ipsam facilis nulla excepturi dolores!
+                    </p>
+                    
+                    <div class="author_bio">
+    
+                    </div>
+                    <div class="social_sharing">
+    
+                    </div>
+                    <div class="blog_comment">
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- HAZARD SECTION: KINDA COMPLICATED -->
+    <hr>
+    <section class="blog_posts">
+
+        <h1 class="blog_posts_header header">
+            ALL BLOG POSTS
+        </h1>
+
+        <!--POST 1-->
+            <div class="post_card blog_post post1">
+                <h2 class="post_title">
+                    How to put together a stylish outfit
+                </h2>
+                <img src="https://wallpapercrafter.com/th8002/714057-women-model-blonde-blue-eyes-jeans-Dani-Diamond.jpg" class="post_img" alt="Image not found" srcset="">
+                <p class="post_info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem... 
+                </p>
+                
+                <button class="blog_modalbox modalbtn1">
+                    View More...
+                </button>
+            </div>
+
+            <div id="postmodal1" class="modal1 hidden">
+                <div class="post_card blog_post modal_item">
+                    <h2 class="post_title">
+    
+                    </h2>
+                    <img src="https://wallpapercrafter.com/th8002/714057-women-model-blonde-blue-eyes-jeans-Dani-Diamond.jpg"" class="post_img" alt="Image not found" srcset="">
+                    <p class="post_info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ut eum tempore libero expedita. Consequatur, animi recusandae rem aspernatur laudantium magnam alias deleniti illo earum distinctio qui nostrum eligendi blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non excepturi, numquam facilis quisquam aut a sed tempora amet autem nulla ex sint libero, nobis fuga necessitatibus vel nihil soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad velit, nesciunt recusandae facilis hic nulla debitis. Voluptatem magnam, nam optio ipsa eligendi illo asperiores est. Eius nemo obcaecati officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quo corrupti ullam modi amet asperiores. Corrupti, laudantium a nobis enim voluptatibus sit, asperiores, et consectetur ipsam facilis nulla excepturi dolores!
+                    </p>
+                    
+                    <div class="author_bio">
+    
+                    </div>
+                    <div class="social_sharing">
+    
+                    </div>
+                    <div class="blog_comment">
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--POST 2-->
+            <div class="post_card blog_post post2">
+                <h2 class="post_title">
+                    A guide to food allergies
+                </h2>
+                <img src="https://www.nyallergy.com/wp-content/uploads/xCopy-of-Food-Allergy-Facts.png.pagespeed.ic.KeTaAxpzge.webp" class="post_img" alt="Image not found" srcset="">
+                <p class="post_info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem... 
+                </p>
+                
+                <button class="blog_modalbox modalbtn2">
+                    View More...
+                </button>
+            </div>
+
+            <div id="postmodal2" class="modal2 hidden">
+                <div class="post_card blog_post modal_item">
+                    <h2 class="post_title">
+    
+                    </h2>
+                    <img src="https://www.nyallergy.com/wp-content/uploads/xCopy-of-Food-Allergy-Facts.png.pagespeed.ic.KeTaAxpzge.webp" class="post_img" alt="Image not found" srcset="">
+                    <p class="post_info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ut eum tempore libero expedita. Consequatur, animi recusandae rem aspernatur laudantium magnam alias deleniti illo earum distinctio qui nostrum eligendi blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non excepturi, numquam facilis quisquam aut a sed tempora amet autem nulla ex sint libero, nobis fuga necessitatibus vel nihil soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad velit, nesciunt recusandae facilis hic nulla debitis. Voluptatem magnam, nam optio ipsa eligendi illo asperiores est. Eius nemo obcaecati officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quo corrupti ullam modi amet asperiores. Corrupti, laudantium a nobis enim voluptatibus sit, asperiores, et consectetur ipsam facilis nulla excepturi dolores!
+                    </p>
+                    
+                    <div class="author_bio">
+    
+                    </div>
+                    <div class="social_sharing">
+    
+                    </div>
+                    <div class="blog_comment">
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!--POST 3-->
+            <div class="post_card blog_post post3">
+                <h2 class="post_title">
+                    How to save money
+                </h2>
+                <img src="https://www.vacu.org/sites/default/files/styles/max_325x325/public/article-featured-image/2019-06/GettyImages-869577740.jpg?itok=J88hNHrF" class="post_img" alt="Image not found" srcset="">
+                <p class="post_info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem... 
+                </p>
+                
+                <button class="blog_modalbox modalbtn3">
+                    View More...
+                </button>
+            </div>
+
+            <div id="postmodal3" class="modal3 hidden">
+                <div class="post_card blog_post modal_item">
+                    <h2 class="post_title">
+                        How to save money
+                    </h2>
+                    <img src="https://www.vacu.org/sites/default/files/styles/max_325x325/public/article-featured-image/2019-06/GettyImages-869577740.jpg?itok=J88hNHrF" class="post_img" alt="Image not found" srcset="">
+                    <p class="post_info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ut eum tempore libero expedita. Consequatur, animi recusandae rem aspernatur laudantium magnam alias deleniti illo earum distinctio qui nostrum eligendi blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non excepturi, numquam facilis quisquam aut a sed tempora amet autem nulla ex sint libero, nobis fuga necessitatibus vel nihil soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad velit, nesciunt recusandae facilis hic nulla debitis. Voluptatem magnam, nam optio ipsa eligendi illo asperiores est. Eius nemo obcaecati officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quo corrupti ullam modi amet asperiores. Corrupti, laudantium a nobis enim voluptatibus sit, asperiores, et consectetur ipsam facilis nulla excepturi dolores!
+                    </p>
+                    
+                    <div class="author_bio">
+    
+                    </div>
+                    <div class="social_sharing">
+    
+                    </div>
+                    <div class="blog_comment">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--POST 4-->
+            <div class="post_card blog_post post4">
+                <h2 class="post_title">
+                    How to put together a stylish outfit
+                </h2>
+                <img src="https://wallpapercrafter.com/th8002/714057-women-model-blonde-blue-eyes-jeans-Dani-Diamond.jpg" class="post_img" alt="Image not found" srcset="">
+                <p class="post_info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem... 
+                </p>
+                
+                <button class="blog_modalbox modalbtn4">
+                    View More...
+                </button>
+            </div>
+
+            <div id="postmodal4" class="modal4 hidden">
+                <div class="post_card blog_post modal_item">
+                    <h2 class="post_title">
+    
+                    </h2>
+                    <img src="https://wallpapercrafter.com/th8002/714057-women-model-blonde-blue-eyes-jeans-Dani-Diamond.jpg"" class="post_img" alt="Image not found" srcset="">
+                    <p class="post_info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ut eum tempore libero expedita. Consequatur, animi recusandae rem aspernatur laudantium magnam alias deleniti illo earum distinctio qui nostrum eligendi blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non excepturi, numquam facilis quisquam aut a sed tempora amet autem nulla ex sint libero, nobis fuga necessitatibus vel nihil soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad velit, nesciunt recusandae facilis hic nulla debitis. Voluptatem magnam, nam optio ipsa eligendi illo asperiores est. Eius nemo obcaecati officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quo corrupti ullam modi amet asperiores. Corrupti, laudantium a nobis enim voluptatibus sit, asperiores, et consectetur ipsam facilis nulla excepturi dolores!
+                    </p>
+                    
+                    <div class="author_bio">
+    
+                    </div>
+                    <div class="social_sharing">
+    
+                    </div>
+                    <div class="blog_comment">
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <button class="more_blog_posts"> SHOW MORE </button>
+
+
+
+            <!--POST 5-->
+            <div class="post_card blog_post post5 hidden">
+                <h2 class="post_title">
+                    A guide to food allergies
+                </h2>
+                <img src="https://www.nyallergy.com/wp-content/uploads/xCopy-of-Food-Allergy-Facts.png.pagespeed.ic.KeTaAxpzge.webp" class="post_img" alt="Image not found" srcset="">
+                <p class="post_info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem... 
+                </p>
+                
+                <button class="blog_modalbox modalbtn5">
+                    View More...
+                </button>
+            </div>
+
+            <div id="postmodal5" class="modal5 hidden">
+                <div class="post_card blog_post modal_item">
+                    <h2 class="post_title">
+    
+                    </h2>
+                    <img src="https://www.nyallergy.com/wp-content/uploads/xCopy-of-Food-Allergy-Facts.png.pagespeed.ic.KeTaAxpzge.webp" class="post_img" alt="Image not found" srcset="">
+                    <p class="post_info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ut eum tempore libero expedita. Consequatur, animi recusandae rem aspernatur laudantium magnam alias deleniti illo earum distinctio qui nostrum eligendi blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non excepturi, numquam facilis quisquam aut a sed tempora amet autem nulla ex sint libero, nobis fuga necessitatibus vel nihil soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad velit, nesciunt recusandae facilis hic nulla debitis. Voluptatem magnam, nam optio ipsa eligendi illo asperiores est. Eius nemo obcaecati officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quo corrupti ullam modi amet asperiores. Corrupti, laudantium a nobis enim voluptatibus sit, asperiores, et consectetur ipsam facilis nulla excepturi dolores!
+                    </p>
+                    
+                    <div class="author_bio">
+    
+                    </div>
+                    <div class="social_sharing">
+    
+                    </div>
+                    <div class="blog_comment">
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!--POST 6-->
+            <div class="post_card blog_post post6 hidden">
+                <h2 class="post_title">
+                    How to save money
+                </h2>
+                <img src="https://www.vacu.org/sites/default/files/styles/max_325x325/public/article-featured-image/2019-06/GettyImages-869577740.jpg?itok=J88hNHrF" class="post_img" alt="Image not found" srcset="">
+                <p class="post_info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem... 
+                </p>
+                
+                <button class="blog_modalbox modalbtn6">
+                    View More...
+                </button>
+            </div>
+
+            <div id="postmodal6" class="modal6 hidden">
+                <div class="post_card blog_post modal_item">
+                    <h2 class="post_title">
+                        How to save money
+                    </h2>
+                    <img src="https://www.vacu.org/sites/default/files/styles/max_325x325/public/article-featured-image/2019-06/GettyImages-869577740.jpg?itok=J88hNHrF" class="post_img" alt="Image not found" srcset="">
+                    <p class="post_info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ut eum tempore libero expedita. Consequatur, animi recusandae rem aspernatur laudantium magnam alias deleniti illo earum distinctio qui nostrum eligendi blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non excepturi, numquam facilis quisquam aut a sed tempora amet autem nulla ex sint libero, nobis fuga necessitatibus vel nihil soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad velit, nesciunt recusandae facilis hic nulla debitis. Voluptatem magnam, nam optio ipsa eligendi illo asperiores est. Eius nemo obcaecati officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quo corrupti ullam modi amet asperiores. Corrupti, laudantium a nobis enim voluptatibus sit, asperiores, et consectetur ipsam facilis nulla excepturi dolores!
+                    </p>
+                    
+                    <div class="author_bio">
+    
+                    </div>
+                    <div class="social_sharing">
+    
+                    </div>
+                    <div class="blog_comment">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--POST 7-->
+            <div class="post_card blog_post post7 hidden">
+                <h2 class="post_title">
+                    How to put together a stylish outfit
+                </h2>
+                <img src="https://wallpapercrafter.com/th8002/714057-women-model-blonde-blue-eyes-jeans-Dani-Diamond.jpg" class="post_img" alt="Image not found" srcset="">
+                <p class="post_info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem... 
+                </p>
+                
+                <button class="blog_modalbox modalbtn7">
+                    View More...
+                </button>
+            </div>
+
+            <div id="postmodal7" class="modal7 hidden">
+                <div class="post_card blog_post modal_item">
+                    <h2 class="post_title">
+    
+                    </h2>
+                    <img src="https://wallpapercrafter.com/th8002/714057-women-model-blonde-blue-eyes-jeans-Dani-Diamond.jpg"" class="post_img" alt="Image not found" srcset="">
+                    <p class="post_info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ut eum tempore libero expedita. Consequatur, animi recusandae rem aspernatur laudantium magnam alias deleniti illo earum distinctio qui nostrum eligendi blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non excepturi, numquam facilis quisquam aut a sed tempora amet autem nulla ex sint libero, nobis fuga necessitatibus vel nihil soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad velit, nesciunt recusandae facilis hic nulla debitis. Voluptatem magnam, nam optio ipsa eligendi illo asperiores est. Eius nemo obcaecati officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quo corrupti ullam modi amet asperiores. Corrupti, laudantium a nobis enim voluptatibus sit, asperiores, et consectetur ipsam facilis nulla excepturi dolores!
+                    </p>
+                    
+                    <div class="author_bio">
+    
+                    </div>
+                    <div class="social_sharing">
+    
+                    </div>
+                    <div class="blog_comment">
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--POST 8-->
+            <div class="post_card blog_post post8 hidden">
+                <h2 class="post_title">
+                    A guide to food allergies
+                </h2>
+                <img src="https://www.nyallergy.com/wp-content/uploads/xCopy-of-Food-Allergy-Facts.png.pagespeed.ic.KeTaAxpzge.webp" class="post_img" alt="Image not found" srcset="">
+                <p class="post_info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem... 
+                </p>
+                
+                <button class="blog_modalbox modalbtn8">
+                    View More...
+                </button>
+            </div>
+
+            <div id="postmodal8" class="modal8 hidden">
+                <div class="post_card blog_post modal_item">
+                    <h2 class="post_title">
+    
+                    </h2>
+                    <img src="https://www.nyallergy.com/wp-content/uploads/xCopy-of-Food-Allergy-Facts.png.pagespeed.ic.KeTaAxpzge.webp" class="post_img" alt="Image not found" srcset="">
+                    <p class="post_info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ut eum tempore libero expedita. Consequatur, animi recusandae rem aspernatur laudantium magnam alias deleniti illo earum distinctio qui nostrum eligendi blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non excepturi, numquam facilis quisquam aut a sed tempora amet autem nulla ex sint libero, nobis fuga necessitatibus vel nihil soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad velit, nesciunt recusandae facilis hic nulla debitis. Voluptatem magnam, nam optio ipsa eligendi illo asperiores est. Eius nemo obcaecati officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quo corrupti ullam modi amet asperiores. Corrupti, laudantium a nobis enim voluptatibus sit, asperiores, et consectetur ipsam facilis nulla excepturi dolores!
+                    </p>
+                    
+                    <div class="author_bio">
+    
+                    </div>
+                    <div class="social_sharing">
+    
+                    </div>
+                    <div class="blog_comment">
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!--POST 9-->
+            <div class="post_card blog_post post9 hidden">
+                <h2 class="post_title">
+                    How to save money
+                </h2>
+                <img src="https://www.vacu.org/sites/default/files/styles/max_325x325/public/article-featured-image/2019-06/GettyImages-869577740.jpg?itok=J88hNHrF" class="post_img" alt="Image not found" srcset="">
+                <p class="post_info">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem... 
+                </p>
+                
+                <button class="blog_modalbox modalbtn9">
+                    View More...
+                </button>
+            </div>
+
+            <div id="postmodal9" class="modal9 hidden">
+                <div class="post_card blog_post modal_item">
+                    <h2 class="post_title">
+                        How to save money
+                    </h2>
+                    <img src="https://www.vacu.org/sites/default/files/styles/max_325x325/public/article-featured-image/2019-06/GettyImages-869577740.jpg?itok=J88hNHrF" class="post_img" alt="Image not found" srcset="">
+                    <p class="post_info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque obcaecati repudiandae, eius animi, architecto eum repellendus quae recusandae voluptates sunt nostrum quis aliquam, quos quasi vel sit. Assumenda, nisi voluptatem Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ut eum tempore libero expedita. Consequatur, animi recusandae rem aspernatur laudantium magnam alias deleniti illo earum distinctio qui nostrum eligendi blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non excepturi, numquam facilis quisquam aut a sed tempora amet autem nulla ex sint libero, nobis fuga necessitatibus vel nihil soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad velit, nesciunt recusandae facilis hic nulla debitis. Voluptatem magnam, nam optio ipsa eligendi illo asperiores est. Eius nemo obcaecati officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quo corrupti ullam modi amet asperiores. Corrupti, laudantium a nobis enim voluptatibus sit, asperiores, et consectetur ipsam facilis nulla excepturi dolores!
+                    </p>
+                    
+                    <div class="author_bio">
+    
+                    </div>
+                    <div class="social_sharing">
+    
+                    </div>
+                    <div class="blog_comment">
+                        
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <hr>
+
+
+    <section class="about">
+        <h1 class="about header">
+            ABOUT BLOOM
+        </h1>
+        <p class="about_header_text">
+            You must be curious
+        </p>
+        <br>
+        
+        <img src="../public/assets/images/page_icon.png" alt="" srcset="">
+        <p class="about_text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error expedita, voluptate impedit suscipit atque ad, molestiae quas blanditiis laborum, quod quaerat distinctio asperiores accusantium! Voluptatibus inventore asperiores debitis dicta quia. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta vero error est molestiae cumque molestias illum facilis iure, velit laboriosam quam, veniam rem, excepturi ipsa consequuntur. Libero id error reprehenderit! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam est velit, ea, officia corporis quis veritatis qui officiis quibusdam facilis eaque. Explicabo veritatis dicta officia maiores magnam eaque voluptate illum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta animi ipsam eos veniam est, distinctio architecto! Hic distinctio quae quia, non est facilis eaque commodi assumenda ad, fugit ratione deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid odit at quis, corporis adipisci ut temporibus suscipit autem cupiditate possimus ipsa consectetur consequuntur inventore sit quibusdam ipsam, nihil excepturi maxime.
+        </p>
+
+        <button class="buy_coffee">
+            BUY US A COFFEE
+        </button>
+
+    </section>
+
+    <br>
+    <hr>
+
+    <section class="blog_footer">
+        <div class="blog_contact">
+            <img src="./assets/images/page_icon.png" class="footer_icon" alt="" srcset="">
+                <h1 class="blog_header_text dancing_script">BLOOM</h1>
+
+            <form action="" class="contact_form">
+                <h2 class="form_header">
+                    CONTACT US
+                </h2>
+                <div class="form_name">
+                    <h3>Name</h3>
+                    <input type="text" placeholder="e.g Matt Riddle" name="username" class="" id="">
+                </div>
+                <div class="form_email">
+                    <h3>E-mail</h3>
+                    <input type="email" placeholder="emailhere@abc.com" class="" id="">
+                </div>
+                <div class="form_message">
+                    <h3>Message</h3>
+                    <input type="text" name="message" placeholder="Hi, I'm messaging for..." id="">
+                </div>
+                <input type="button" value="Submit">
+            </form>
+        </div>
+
+        <div class="footer_lorem">
+            <p class="footer_lorem_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi exercitationem quas magnam. Praesentium voluptates culpa, ipsam quia quasi amet quibusdam laudantium rerum modi nam aut possimus eos facere perspiciatis. Explicabo? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, officiis ea neque natus aliquid dicta hic quam dolore nihil maiores nam ex ipsa laboriosam cumque voluptatibus unde, quos asperiores tempora. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus id dolores architecto explicabo quae accusantium mollitia. Illum mollitia, tempore nihil amet eum laboriosam soluta. Quo sequi minus nihil iste hic?</p>
+        </div>
+
+        <div class="footer_nav">
+            <ul>
+                <li><a href="">Item 1</a></li>
+                <li><a href="">Item 2</a></li>
+                <li><a href="">Item 3</a></li>
+                <li><a href="">Item 4</a></li>
+                <li><a href="">Item 5</a></li>
+            </ul>
+        </div>
+        <div class="copyright_div">
+            <i class="fa fa-copyright" aria-hidden="true"></i>
+        <h2 class="copyright">Copyright 2023</h2>
+        </div>
+    </section>
+
+
+
+    <script>
+     
+    </script>
+
+    <script src="../src/components/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1eb2bdc693.js" crossorigin="anonymous"></script>
+    <script src="../src/components/featuredposts.js"></script>
 </body>
 </html>
